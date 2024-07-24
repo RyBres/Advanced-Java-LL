@@ -20,12 +20,13 @@ public class genericsExample {
         // Example without generics
         names = new ArrayList();
         names.add("Ryan");
-        name = (String) names.get(0);
+        name = (String) names.get(0); // here, we have to cast the list element to a string
         System.out.println("First name: " + name);
         //names.add(7);
         
         // Example with generics (we also don't declare vars beforehand)
-        List<String> names2 = new ArrayList();
+        // this code is safer, as it ensures that only strings are added to the list (type checking)
+        List<String> names2 = new ArrayList(); // here, we define the list as a list of strings FIRST
         names2.add("Ryan");
         String name2 = names2.get(0);
         System.out.println("First name: " + name2);
