@@ -26,7 +26,7 @@ public class substitutionFailure {
         List<Office> offices = new ArrayList();
         offices.add(new Office());
         offices.add(new Office());
-        printBuildings(offices); // displays that although office is a subtype of 
+        //printBuildings(offices); // displays that although office is a subtype of 
         // building, which means you can for ex. pass an office type to a 
         // building method, that it's not totally universal. HEre we see that
         // a list of offices is not considered a subtype of a list of buildings

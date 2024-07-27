@@ -36,7 +36,10 @@ public class substitutionWildcards
         //addHouseToList(buildings);
     }   
     
-    static void printBuildings(List<Building> buildings)
+    // the ? extends is the wildcard element of the type definition.
+    // This will allow us to finally input list subtypes of buildings
+    // (i.e., houses and offices). It is quite self explanatory
+    static void printBuildings(List<? extends Building> buildings)
     {
         for(int i = 0; i < buildings.size(); i++)
         {
@@ -45,7 +48,10 @@ public class substitutionWildcards
         System.out.println();
     }
     
-    static void addHouseToList(List<House> buildings)
+    // We can also use wildcards to pass a supertype when only a subtype is specified.
+    // For example, if we want to pass buildings to a method that currently accepts
+    // only a list of houses.
+    static void addHouseToList(List<? super House> buildings)
     {
         buildings.add(new House());
         System.out.println();
