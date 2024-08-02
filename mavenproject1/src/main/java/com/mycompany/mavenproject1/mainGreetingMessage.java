@@ -20,6 +20,22 @@ public class mainGreetingMessage implements greetingMessage {
             }
         };
         gm.greet("Bethan");
+        
+        // Method below implements same w/ a lambda, which removes some
+        // boilerplate
+        greetingMessage gm2 = (String name) -> 
+        {
+            System.out.println("Hello " + name);
+        };
+        
+        gm2.greet("Ryan");
+        
+        // Another implementation of functional interface with a lambda
+        messagePrinter mp = () -> 
+        {
+            System.out.println("This is a message.");
+        };
+        mp.printMessage();
     }
 
     @Override
