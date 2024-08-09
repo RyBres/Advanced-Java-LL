@@ -22,5 +22,10 @@ public class PathClassExample {
         } catch (IOException ex) {
             
         }
+        
+        Path path2 = Paths.get("C:\\pathhere");
+        System.out.println(path2.getParent());
+        System.out.println(path2.getRoot());
+        System.out.println(path2.getFileName());
     }
 }
